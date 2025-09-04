@@ -61,3 +61,16 @@ def recuperar_metricas_vendaUtilizacao(conn):
 
     df['ContratanteId'] = df['ContratanteId'].astype(str)
     return df
+
+def recuperar_faturamento_operacoes_abertas(conn):
+    query = """
+    select
+        *
+    from analysis.vw_faturamento_sob_operacoes_abertas
+    """
+    df = pd.read_sql(query, conn)
+
+    df['CampanhaId'] = df['CampanhaId'].astype(str)
+    df['ContratanteId'] = df['ContratanteId'].astype(str)
+    df['OrdemPagamentoId'] = df['OrdemPagamentoId'].astype(str)
+    return df
