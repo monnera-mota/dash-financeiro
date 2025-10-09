@@ -22,3 +22,4 @@ cliente_metricas_mensais.to_parquet("data/cliente_metricas_mensais.parquet", ind
 faturamento_aberto.to_parquet("data/faturamento_aberto.parquet", index=False)
 
 print(f"{datetime.now()} - Processo finalizado")
+# %%

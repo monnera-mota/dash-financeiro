@@ -23,8 +23,8 @@ def recuperar_cobrancas(conn):
 
     df['CobrancaId'] = df['CobrancaId'].astype(str)
     df['ContratanteId'] = df['ContratanteId'].astype(str)
-    df['CampanhaId'] = df['CampanhaId'].astype(str)
-    df['OrdemPagamentoId'] = df['OrdemPagamentoId'].astype(str)
+    df['NotaFiscalServicoId'] = df['NotaFiscalServicoId'].astype(str)
+    df['OperacaoId'] = df['OperacaoId'].astype(str)
     return df
 
 def recuperar_contratantes(conn):
